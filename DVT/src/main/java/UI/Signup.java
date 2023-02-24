@@ -63,7 +63,16 @@ public class Signup extends javax.swing.JFrame
         monthComboBox.setModel(monthComboModel);
         //day
         ArrayList<String> dayList = new ArrayList<>();
-        for(int i = 1; i < 32; i++)
+        dayList.add("01");
+        dayList.add("02");
+        dayList.add("03");
+        dayList.add("04");
+        dayList.add("05");
+        dayList.add("06");
+        dayList.add("07");
+        dayList.add("08");
+        dayList.add("09");
+        for(int i = 10; i < 32; i++)
         {
             dayList.add(i + "");
         }
@@ -84,9 +93,8 @@ public class Signup extends javax.swing.JFrame
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        nameField = new javax.swing.JTextField();
+        usernameField = new javax.swing.JTextField();
         yesOption = new javax.swing.JCheckBox();
         submitButton = new javax.swing.JButton();
         yearComboBox = new javax.swing.JComboBox<>();
@@ -102,32 +110,46 @@ public class Signup extends javax.swing.JFrame
         jLabel10 = new javax.swing.JLabel();
         badPasswordErrorMessage = new javax.swing.JLabel();
         noExistingDateErrorMessage = new javax.swing.JLabel();
-        noOptionSelectedErrorMessage = new javax.swing.JLabel();
         ageField = new javax.swing.JTextField();
         unappropriateAgeErrorMessage = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         birthdateAndAgeDontCoicideErrorMessage = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        noOptionSelectedErrorMessage = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("VeryGreatUniversity.org Signup");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 12, -1, 41));
 
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("What is your age? Type it in number form.");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 359, -1, -1));
 
+        jLabel3.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Is this you first year here?");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 439, -1, -1));
 
-        jLabel4.setText("What's your name?");
-
+        jLabel5.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("When were you born?");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 208, -1, -1));
 
-        nameField.addActionListener(new java.awt.event.ActionListener()
+        usernameField.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
-                nameFieldActionPerformed(evt);
+                usernameFieldActionPerformed(evt);
             }
         });
+        getContentPane().add(usernameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 80, 101, -1));
 
         yesOption.setText("Yes");
         yesOption.addActionListener(new java.awt.event.ActionListener()
@@ -137,6 +159,7 @@ public class Signup extends javax.swing.JFrame
                 yesOptionActionPerformed(evt);
             }
         });
+        getContentPane().add(yesOption, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 456, -1, -1));
 
         submitButton.setText("Submit");
         submitButton.addActionListener(new java.awt.event.ActionListener()
@@ -146,25 +169,43 @@ public class Signup extends javax.swing.JFrame
                 submitButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(submitButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(365, 474, -1, -1));
 
         yearComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(yearComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(59, 229, 94, 32));
 
+        jLabel6.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Year:");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 238, -1, -1));
 
+        jLabel7.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Month: ");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 276, -1, -1));
 
         dayComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(dayComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(59, 305, 94, 35));
 
         monthComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(monthComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(59, 267, 94, 32));
 
+        jLabel8.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("Day:");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 315, -1, -1));
 
         noOption.setText("No");
+        getContentPane().add(noOption, new org.netbeans.lib.awtextra.AbsoluteConstraints(93, 456, -1, -1));
 
+        jLabel9.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Insert your password. It must be 8 characters in length, contain ");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 125, -1, -1));
 
         noNameErrorMessage.setForeground(new java.awt.Color(255, 0, 51));
         noNameErrorMessage.setText("**PLEASE ENTER YOUR NAME**");
+        getContentPane().add(noNameErrorMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(133, 82, -1, -1));
 
         passwordField.addActionListener(new java.awt.event.ActionListener()
         {
@@ -173,161 +214,89 @@ public class Signup extends javax.swing.JFrame
                 passwordFieldActionPerformed(evt);
             }
         });
+        getContentPane().add(passwordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 165, 98, -1));
 
+        jLabel10.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("a number, and contain both upper case and lower case letters");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 146, -1, 13));
 
         badPasswordErrorMessage.setForeground(new java.awt.Color(255, 0, 51));
         badPasswordErrorMessage.setText("**PLEASE ADHERE TO THE REQUIREMENTS**");
+        getContentPane().add(badPasswordErrorMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(122, 167, -1, -1));
 
         noExistingDateErrorMessage.setForeground(new java.awt.Color(255, 0, 51));
         noExistingDateErrorMessage.setText("**PLEASE SELECT AN EXISTING DATE**");
+        getContentPane().add(noExistingDateErrorMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 305, -1, -1));
+        getContentPane().add(ageField, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 402, 103, -1));
+
+        unappropriateAgeErrorMessage.setForeground(new java.awt.Color(255, 0, 51));
+        unappropriateAgeErrorMessage.setText("**PLEASE SELECT AN APPROPRIATE AGE AS A DIGIT**");
+        getContentPane().add(unappropriateAgeErrorMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(133, 404, -1, -1));
+
+        jLabel11.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel11.setText("Please note that you need to be 18+  this year to be a part of this community.");
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 375, -1, -1));
+
+        birthdateAndAgeDontCoicideErrorMessage.setForeground(new java.awt.Color(255, 0, 51));
+        birthdateAndAgeDontCoicideErrorMessage.setText("**YOUR BIRTHDATE AND AGE DO NOT MATCH**");
+        getContentPane().add(birthdateAndAgeDontCoicideErrorMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 326, -1, -1));
+
+        jPanel1.setBackground(new java.awt.Color(0, 0, 102));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 450, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 60, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 60));
+
+        jPanel2.setBackground(new java.awt.Color(255, 204, 204));
+
+        jLabel4.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("What's your username?");
 
         noOptionSelectedErrorMessage.setForeground(new java.awt.Color(255, 0, 51));
         noOptionSelectedErrorMessage.setText("**PLEASE SELECT A SINGULAR OPTION**");
 
-        unappropriateAgeErrorMessage.setForeground(new java.awt.Color(255, 0, 51));
-        unappropriateAgeErrorMessage.setText("**PLEASE SELECT AN APPROPRIATE AGE AS A DIGIT**");
-
-        jLabel11.setText("Please note that you need to be 18+  this year to be a part of this community.");
-
-        birthdateAndAgeDontCoicideErrorMessage.setForeground(new java.awt.Color(255, 0, 51));
-        birthdateAndAgeDontCoicideErrorMessage.setText("**YOUR BIRTHDATE AND AGE DO NOT MATCH**");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(noOptionSelectedErrorMessage))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(yesOption)
-                                .addGap(36, 36, 36)
-                                .addComponent(noOption)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(submitButton)
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4)
-                                    .addComponent(nameField, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(noNameErrorMessage))
-                            .addComponent(jLabel9)
-                            .addComponent(jLabel10)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel6)
-                                        .addComponent(jLabel7))
-                                    .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(yearComboBox, 0, 94, Short.MAX_VALUE)
-                                    .addComponent(monthComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(dayComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(noExistingDateErrorMessage)
-                                    .addComponent(birthdateAndAgeDontCoicideErrorMessage)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(badPasswordErrorMessage))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(ageField, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(unappropriateAgeErrorMessage))
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel11))
-                        .addGap(0, 0, Short.MAX_VALUE))))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel5))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addComponent(jLabel1)))
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(noNameErrorMessage))
-                .addGap(26, 26, 26)
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(badPasswordErrorMessage))
-                .addGap(24, 24, 24)
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(yearComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(monthComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(noExistingDateErrorMessage)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(birthdateAndAgeDontCoicideErrorMessage))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(dayComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel8)))
-                .addGap(18, 18, 18)
-                .addComponent(jLabel2)
-                .addGap(1, 1, 1)
-                .addComponent(jLabel11)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ageField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(unappropriateAgeErrorMessage))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(submitButton)
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(noOptionSelectedErrorMessage))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(yesOption)
-                            .addComponent(noOption))
-                        .addContainerGap(31, Short.MAX_VALUE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(194, Short.MAX_VALUE)
+                .addComponent(noOptionSelectedErrorMessage)
+                .addGap(54, 54, 54))
         );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 380, Short.MAX_VALUE)
+                .addComponent(noOptionSelectedErrorMessage)
+                .addGap(42, 42, 42))
+        );
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 450, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void nameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameFieldActionPerformed
+    private void usernameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nameFieldActionPerformed
+    }//GEN-LAST:event_usernameFieldActionPerformed
 
     private void yesOptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yesOptionActionPerformed
         // TODO add your handling code here:
@@ -336,7 +305,7 @@ public class Signup extends javax.swing.JFrame
     private void submitButtonActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_submitButtonActionPerformed
     {//GEN-HEADEREND:event_submitButtonActionPerformed
         //checking if there is input in the name field
-        if(isNameFieldNull(nameField.getText()))
+        if(isUsernameEmpty(usernameField.getText()))
         {
             noNameErrorMessage.setVisible(true);
         }
@@ -401,8 +370,12 @@ public class Signup extends javax.swing.JFrame
         }
         
         
+        //prints the date entered into the console
+        System.out.println(" " + deriveBirthdate(dayComboBox.getItemAt(dayComboBox.getSelectedIndex()), monthComboBox.getItemAt(monthComboBox.getSelectedIndex()), yearComboBox.getItemAt(yearComboBox.getSelectedIndex())));
+        
+        
         //if everything entered is correct then the user is redirected to the welcome message
-        if(!isNameFieldNull(nameField.getText()) && isPasswordValid(passwordField.getText()) && isDateReal(dayComboBox.getItemAt(dayComboBox.getSelectedIndex()), monthComboBox.getItemAt(monthComboBox.getSelectedIndex()), yearComboBox.getItemAt(yearComboBox.getSelectedIndex())) && isAgeWithinRange(ageField.getText()) && isBirthdayAndAgeRelated(ageField.getText(), yearComboBox.getItemAt(yearComboBox.getSelectedIndex())) && !isNoOrTwoOptionsChosen(yesOption.isSelected(), noOption.isSelected()))
+        if(!isUsernameEmpty(usernameField.getText()) && isPasswordValid(passwordField.getText()) && isDateReal(dayComboBox.getItemAt(dayComboBox.getSelectedIndex()), monthComboBox.getItemAt(monthComboBox.getSelectedIndex()), yearComboBox.getItemAt(yearComboBox.getSelectedIndex())) && isAgeWithinRange(ageField.getText()) && isBirthdayAndAgeRelated(ageField.getText(), yearComboBox.getItemAt(yearComboBox.getSelectedIndex())) && !isNoOrTwoOptionsChosen(yesOption.isSelected(), noOption.isSelected()))
         {
             new SignupComplete().setVisible(true);
             this.dispose();
@@ -466,8 +439,9 @@ public class Signup extends javax.swing.JFrame
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JComboBox<String> monthComboBox;
-    private javax.swing.JTextField nameField;
     private javax.swing.JLabel noExistingDateErrorMessage;
     private javax.swing.JLabel noNameErrorMessage;
     private javax.swing.JCheckBox noOption;
@@ -475,6 +449,7 @@ public class Signup extends javax.swing.JFrame
     private javax.swing.JTextField passwordField;
     private javax.swing.JButton submitButton;
     private javax.swing.JLabel unappropriateAgeErrorMessage;
+    private javax.swing.JTextField usernameField;
     private javax.swing.JComboBox<String> yearComboBox;
     private javax.swing.JCheckBox yesOption;
     // End of variables declaration//GEN-END:variables

@@ -4,6 +4,10 @@
  */
 package Backend;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
+
 /**
  *
  * @author Meganl
@@ -15,7 +19,7 @@ public class Validations
     
     
     //checks if something was entered into the name field
-    public static boolean isNameFieldNull(String input)
+    public static boolean isUsernameEmpty(String input)
     {
         //the name field is empty
         if(input.compareTo("") == 0)
@@ -170,5 +174,24 @@ public class Validations
         }
 
         return true;
+    }
+    
+    
+    //makes the date into a date object
+    public static LocalDate deriveBirthdate(String day, String month, String year)
+    {
+        //checks to see if there is a date that is applicable
+        if(isDateReal(day, month, year))
+        {
+            //creating a date time formatter to get the date into a specific format
+            String birthday = day + " " + month + " " +  year;
+            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd MMMM yyyy");
+
+            LocalDate newDate = LocalDate.parse(birthday, dtf);
+            return newDate;
+        }
+        
+        //date isn't real
+        return null;
     }
 }
